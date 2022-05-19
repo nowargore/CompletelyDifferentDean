@@ -1,0 +1,39 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization
+@model CompletelyDifferentDean.Dto.Disciplines.DisciplineDetailsDto
+@inject IViewLocalizer L
+@inject IStringLocalizer<WebResources> LR
+
+@{
+    ViewData["Title"] = L["Discipline details"];
+}
+
+<h1>@L["Discipline details"]</h1>
+
+<div>
+    <h4>@LR["Discipline"]</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+    <div>
+        <i class="fa-solid fa-user"></i>
+        @Html.DisplayFor(model => model.LastModifiedBy)
+        <span class="text-muted">@Model.GetLastModifiedAsReadableText()</span>
+    </div>
+</div>
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary btn-primary">@LR["Edit"]</a>
+    <a asp-action="Index" class="btn btn-outline-secondary">@LR["Back to List"]</a>
+</div>

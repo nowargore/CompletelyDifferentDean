@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Automapper" Version="11.0.1" />
+    <PackageReference Include="DotNetCore.EntityFrameworkCore" Version="16.35.0" />
+    <PackageReference Include="DotNetCore.Objects" Version="16.35.0" />
+    <PackageReference Include="dotnetcore.results" Version="16.35.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CompletelyDifferentDean.Dto\CompletelyDifferentDean.Dto.csproj" />
+    <ProjectReference Include="..\CompletelyDifferentDean.Infrastructure\CompletelyDifferentDean.Infrastructure.csproj" />
+    <ProjectReference Include="..\CompletelyDifferentDean.Model\CompletelyDifferentDean.Model.csproj" />
+  </ItemGroup>
+
+</Project>
